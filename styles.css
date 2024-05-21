@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+}
+nav a {
+    color: #fff;
+    padding: 15px 20px;
+    text-decoration: none;
+    display: block;
+}
+nav a:hover {
+    background-color: #555;
+}
+.container {
+    display: flex;
+    margin: 20px;
+}
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+.post {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+.post:last-child {
+    border-bottom: none;
+}
+.post-title {
+    font-weight: bold;
+    color: #333;
+}
+.post-content {
+    margin-top: 5px;
+    color: #666;
+}
