@@ -24,22 +24,22 @@ nav a {
 nav a:hover {
     background-color: #555;
 }
+
+/* 본문 */
 .container {
-    display: flex;
+    margin-top: 10px;
+    display: block;
     margin: 20px;
-}
-.sidebar {
-    width: 200px;
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
 }
 .content {
     flex: 1;
     padding: 20px;
     background-color: #fff;
 }
+
+/* 게시물 */
 .post {
+    height: 100px;
     border-bottom: 1px solid #ccc;
     padding: 10px 0;
 }
@@ -53,4 +53,38 @@ nav a:hover {
 .post-content {
     margin-top: 5px;
     color: #666;
+}
+
+
+/* 검색창 */
+.search-form {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.search-form input[type="text"] {
+    width: 1000px;
+    height: 35px;
+    padding: 5px 10px;
+    border: 2px solid #a0a0a0;
+    border-radius: 30px;
+    outline: none;
+}
+
+/* 검색버튼 */
+.search-form button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-left: none;
+    height: 30px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+.search-form button:hover {
+    background-color: #0056b3;
 }
