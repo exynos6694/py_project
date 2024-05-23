@@ -15,7 +15,6 @@ header {
 }
 
 .logo img {
-    
     height: 40px;
     padding: 10px;
 }
@@ -39,6 +38,10 @@ nav ul li a {
     color: #3C4858;
     font-weight: bold;
     font-family: 'Kakao Regular', 'Apple SD Gothic Neo', sans-serif;
+}
+nav ul li a:hover {
+    color: #7a92b1;
+
 }
 
 .search-form {
