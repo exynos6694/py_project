@@ -15,6 +15,7 @@ header {
 }
 
 .logo img {
+
     height: 40px;
     padding: 10px;
 }
@@ -93,14 +94,50 @@ main {
 }
 
 
+/* 카테고리 */
+/* 글 목록 스타일 */
+.post-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.post-item {
+    width: 30%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 2px solid #ccc;
+    
+}
+.post-item h3 {
+    margin: 10px;
+    font-family: 'Kakao Bold', 'Apple SD Gothic Neo', sans-serif;
+    font-weight: bold;
+}
+
+.post-item p {
+    margin: 10px;
+    font-family: 'Kakao Regular', 'Apple SD Gothic Neo', sans-serif;
+    color: #777;
+}
+
+
+
 /* 푸터 스타일 */
 footer {
     background-color: #F2F2F2;
     padding: 20px;
     text-align: center;
 }
+footer li p{
+    margin-top: 10px;
+}
 
 .slide-banner {
-    height: 200px;
+    height: 100px;
     background-color: #D9D9D9;
 }
