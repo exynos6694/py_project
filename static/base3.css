@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 24px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.icons {
+    display: flex;
+}
+
+.icon {
+    margin-left: 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
+.icon a{
+    
+    font-size: 24px;
+    text-decoration: none;
+}
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
+
+.container {
+    display: block;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 2000px;
+    float: left;
+}
+
+#chart {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    height: 800px;
+    box-sizing: border-box;
+}
+
+.section {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    width: 500px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    float: left;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+ol {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 5px 0;
+}
+
+span {
+    color: red;
+}
