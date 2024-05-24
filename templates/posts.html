@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전체 글</title>
+    <link rel="stylesheet" href="../static/styles_posts.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">D</div>
+        <div class="title"></div>
+        <div class="search-container">
+            <input type="text" placeholder="검색">
+            <button>🔍</button>
+        </div>
+        <div class="icons">
+            <div class="icon"><a href="/login">👤</a></div>
+            <div class="icon">🎧</div>
+        </div>
+    </div>
+    
+    <div class="navbar">
+        <div class="nav-item"><a href="/">홈</a></div>
+        <div class="nav-item"><a href="/write">글쓰기</a></div>
+        <div class="nav-item"><a href="/posts">전체글</a></div>
+        <div class="nav-item">카테고리 3</div>
+        <div class="nav-item">카테고리 4</div>
+        <div class="nav-item">카테고리 5</div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>전체 글 🌟</h2>
+            <table class="posts-table">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>내용</th>
+                        <th>작성자</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for post in posts %}
+                    <tr>
+                        <td class="td2">{{ loop.index }}</td>
+                        <td class="td3"><a href="/posts/{{ post._id }}">{{ post.title }}</a></td>
+                        <td class="td4">{{ post.content }}</td>
+                        <td class="td5">{{ post.author }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

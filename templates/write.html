@@ -9,13 +9,13 @@
 <body>
     <div class="header">
         <div class="logo">D</div>
-        <div class="title">커뮤니티</div>
+        <div class="title"></div>
         <div class="search-container">
             <input type="text" placeholder="실시간 급상승">
             <button>🔍</button>
         </div>
         <div class="icons">
-            <div class="icon"><a href="login.html">👤</a></div>
+            <div class="icon"><a href="/login">👤</a></div>
             <div class="icon">🎧</div>
         </div>
     </div>
@@ -23,8 +23,7 @@
     <div class="navbar">
         <div class="nav-item"><a href="/">홈</a></div>
         <div class="nav-item"><a href="/write">글쓰기</a></div>
-        <div class="nav-item">카테고리 1</div>
-        <div class="nav-item">카테고리 2</div>
+        <div class="nav-item"><a href="/posts">전체글</a></div>
         <div class="nav-item">카테고리 3</div>
         <div class="nav-item">카테고리 4</div>
         <div class="nav-item">카테고리 5</div>
@@ -36,6 +35,10 @@
             <form action="/submit" method="post">
                 <label for="title">제목:</label>
                 <input type="text" id="title" name="title" required>
+
+                <label for="title">작성자:</label>
+                <input type="text" id="author" name="author" required>
+
                 <label for="content">내용:</label>
                 <textarea id="content" name="content" rows="10" required></textarea>
                 <button type="submit">제출</button>

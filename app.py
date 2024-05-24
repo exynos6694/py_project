@@ -44,7 +44,6 @@ def get_melon_chart():
             'title': song.text,
             'artist': artist.text
         })
-
     return chart
 
 # 루트 경로 처리
@@ -54,6 +53,12 @@ async def read_root(request: Request):
     posts = await posts_collection.find().to_list(length=100)
     return templates.TemplateResponse("index.html", {"request": request, "chart": chart, "posts": posts})
 
+# 로그인 폼 페이지
+@app.get("/login", response_class=HTMLResponse)
+async def login_form(request: Request):
+    return templates.TemplateResponse("login.html", {"request": request})
+
+
 # 글쓰기 폼 페이지
 @app.get("/write", response_class=HTMLResponse)
 async def write_form(request: Request):
@@ -61,10 +66,19 @@ async def write_form(request: Request):
 
 # 글쓰기 제출 처리
 @app.post("/submit", response_class=RedirectResponse)
-async def submit_post(request: Request, title: str = Form(...), content: str = Form(...)):
-    post = {"title": title, "content": content}
+async def submit_post(request: Request, title: str = Form(...), content: str = Form(...), author: str = Form(...) ) :
+    post = {"title": title,"author":author, "content": content}
     await posts_collection.insert_one(post)
     return RedirectResponse(url="/", status_code=303)
+
+@app.get("/posts", response_class=HTMLResponse)
+async def read_posts(request: Request):
+    posts = await posts_collection.find().to_list(length=100)
+    return templates.TemplateResponse("posts.html", {"request": request, "posts": posts})
+
+
+
+
 
 if __name__ == "__main__":
     import uvicorn

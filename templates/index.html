@@ -9,13 +9,13 @@
 <body>
     <div class="header">
         <div class="logo">D</div>
-        <div class="title">커뮤니티</div>
+        <div class="title"></div>
         <div class="search-container">
             <input type="text" placeholder="실시간 급상승">
             <button>🔍</button>
         </div>
         <div class="icons">
-            <div class="icon"><a href="login.html">👤</a></div>
+            <div class="icon"><a href="/login">👤</a></div>
             <div class="icon">🎧</div>
         </div>
     </div>
@@ -23,7 +23,7 @@
     <div class="navbar">
         <div class="nav-item"><a href="/">홈</a></div>
         <div class="nav-item"><a href="/write">글쓰기</a></div>
-        <div class="nav-item">카테고리 2</div>
+        <div class="nav-item"><a href="/posts">전체글</a></div>
         <div class="nav-item">카테고리 3</div>
         <div class="nav-item">카테고리 4</div>
         <div class="nav-item">카테고리 5</div>
@@ -35,7 +35,7 @@
             <div class="chart-content">
                 <ol>
                     {% for entry in chart %}
-                    <li>{{ entry.rank }}: {{ entry.title }} - {{ entry.artist }}</li>
+                    <li><a href="https://www.youtube.com/results?search_query={{ entry.title }}">{{ entry.rank }}: {{ entry.title }} - {{ entry.artist }}</a></li>
                     {% endfor %}
                 </ol>
             </div>
@@ -43,9 +43,9 @@
         <div class="section" id="hot-posts">
             <h2>HOT 글 🔥</h2>
             <ol>
-                <li>호시는는 귀엽다.</li>
+                <!-- <li>호시는는 귀엽다.</li>
                 <li>나니는 깜찍하다. <span>🔺3</span></li>
-                <li>머리 깨질것 같다.</li>
+                <li>머리 깨질것 같다.</li> -->
             </ol>
         </div>
         <div class="section" id="recommended-posts">
@@ -59,17 +59,17 @@
         <div class="section" id="notice">
             <h2>공지사항</h2>
             <ol>
-                <li>호시는는 귀엽다.</li>
-                <li>나니는 깜찍하다. <span>🔺3</span></li>
-                <li>머리 깨질것 같다.</li>
+                <li>이 사이트는</li>
+                <li>Html, css, Python, Fastapi, Mongodb로</li>
+                <li>개발하였습니다</li>
             </ol>
         </div>
         <div class="section" id="search">
             <h2>실시간 검색어</h2>
             <ol>
-                <li>호시는는 귀엽다.</li>
+                <!-- <li>호시는는 귀엽다.</li>
                 <li>나니는 깜찍하다. <span>🔺3</span></li>
-                <li>머리 깨질것 같다.</li>
+                <li>머리 깨질것 같다.</li> -->
             </ol>
         </div>
     </div>

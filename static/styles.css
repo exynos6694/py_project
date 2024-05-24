@@ -1,5 +1,6 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
@@ -9,7 +10,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #f1f1f1;
+    background-color: #ffe262;
     border-bottom: 1px solid #ccc;
 }
 
@@ -25,6 +26,7 @@ body {
 .search-container {
     display: flex;
     align-items: center;
+    margin-left: 1200px;
 }
 
 .search-container input {
@@ -48,19 +50,25 @@ body {
 }
 /* 카테고리 */
 .navbar {
-    display: block;
-    height: 30px;
+    display: flex;
     justify-content: space-around;
     padding: 10px;
-    background-color: #cbcbcb;
-    border-bottom: 1px solid #ccc;
-    
+    background-color: #757c36;
 }
 
 .nav-item {
     margin: 0 10px;
-    float: left;
-    margin-left: 50px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-item a:hover {
+    background-color: #555;
 }
 
 .container {
@@ -71,7 +79,7 @@ body {
     float: left;
     
 }
-
+/* 차트 */
 #chart {
     
     padding: 20px;
@@ -86,7 +94,14 @@ body {
 #chart li{
     padding: 7px;
 }
+.chart-content a{
+    text-decoration: none;
+    color: #333;
+}
 
+.chart-content a:hover{
+    text-decoration: underline;
+}
 
 .section {
     border: 3px solid #ccc;
@@ -124,6 +139,7 @@ span {
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 10px;
+    float: none;
 }
 
 #write-form form {
@@ -157,3 +173,5 @@ span {
 #write-form button:hover {
     background-color: #45a049;
 }
+
+
