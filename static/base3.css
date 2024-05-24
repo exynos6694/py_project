@@ -71,10 +71,15 @@ body {
     padding: 20px;
     margin: 10px;
     width: 300px;
-    height: 300px;
+    height: 80vh; /* 화면 높이의 80%를 차지 */
+    overflow-y: auto; /* 세로 스크롤 활성화 */
     box-sizing: border-box;
     display: block;
 }
+#chart li{
+    padding: 7px;
+}
+
 
 .section {
     border: 1px solid #ccc;

@@ -30,20 +30,13 @@
     <div class="container">
         <div class="section" id="chart">
             <h2>실시간 인기 차트 🎵</h2>
-            <ol>
-                {% for entry in chart %}
-                <li>{{ entry.rank }}: {{ entry.title }} - {{ entry.artist }}</li>
-                {% endfor %}
-            </ol>
-            <!-- <ol>
-                <li>Supernova - aespa <span>🔺1</span></li>
-                <li>나니마려운 노래</li>
-                <li>나니마려운 노래</li>
-                <li>나니마려운 노래</li>
-                <li>나니마려운 노래</li>
-                <li>나니마려운 노래</li>
-                <li>나니마려운 노래</li>
-            </ol> -->
+            <div class="chart-content">
+                <ol>
+                    {% for entry in chart %}
+                    <li>{{ entry.rank }}: {{ entry.title }} - {{ entry.artist }}</li>
+                    {% endfor %}
+                </ol>
+            </div>
         </div>
         <div class="section" id="hot-posts">
             <h2>HOT 글 🔥</h2>
