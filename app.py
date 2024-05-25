@@ -59,7 +59,7 @@ async def login_form(request: Request):
     return templates.TemplateResponse("login.html", {"request": request})
 
 
-# 글쓰기 폼 페이지
+# 글쓰기  페이지
 @app.get("/write", response_class=HTMLResponse)
 async def write_form(request: Request):
     return templates.TemplateResponse("write.html", {"request": request})
@@ -71,6 +71,7 @@ async def submit_post(request: Request, title: str = Form(...), content: str = F
     await posts_collection.insert_one(post)
     return RedirectResponse(url="/", status_code=303)
 
+# 전체글  페이지
 @app.get("/posts", response_class=HTMLResponse)
 async def read_posts(request: Request):
     posts = await posts_collection.find().to_list(length=100)
@@ -82,4 +83,10 @@ async def read_posts(request: Request):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(
+        app,
+        host="0.0.0.0",
+        port=8000,
+        # ssl_keyfile="C:/Users/azsx6/Desktop/py_project/host_key/localhost-key.pem",
+        # ssl_certfile="C:/Users/azsx6/Desktop/py_project/host_key/localhost.pem"
+    )

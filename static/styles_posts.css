@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #1a1a1a;
+    
     margin: 0;
     padding: 0;
 }
@@ -9,14 +10,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background-color: #ffe262;
-    border-bottom: 1px solid #ccc;
+    padding: 15px;
+    background-color: #333;
+    
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
+    color: #ccc;
 }
 
 .title {
@@ -53,7 +55,7 @@ body {
     display: flex;
     justify-content: space-around;
     padding: 10px;
-    background-color: #757c36;
+    background-color: #444;
 }
 
 .nav-item {
@@ -81,6 +83,9 @@ body {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 1300px;
+    margin-left: 250px;
+    margin-top: 50px;
 }
 
 h2 {

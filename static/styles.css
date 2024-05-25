@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #1a1a1a;
+    
     margin: 0;
     padding: 0;
 }
@@ -9,14 +10,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background-color: #ffe262;
-    border-bottom: 1px solid #ccc;
+    padding: 15px;
+    background-color: #333;
+    
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
+    color: #ccc;
 }
 
 .title {
@@ -53,7 +55,7 @@ body {
     display: flex;
     justify-content: space-around;
     padding: 10px;
-    background-color: #757c36;
+    background-color: #444;
 }
 
 .nav-item {
@@ -96,7 +98,7 @@ body {
 }
 .chart-content a{
     text-decoration: none;
-    color: #333;
+    color: #363636;
 }
 
 .chart-content a:hover{
@@ -104,13 +106,14 @@ body {
 }
 
 .section {
-    border: 3px solid #ccc;
+    /* border: 3px solid #858585; */
     padding: 20px;
     margin: 10px;
     width: 480px;
     box-sizing: border-box;
     border-radius: 30px;
     float: right;
+    background-color: #fff;
 }
 
 h2 {
