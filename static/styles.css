@@ -16,7 +16,9 @@ body {
 }
 
 .logo {
-    font-size: 24px;
+    
+    text-decoration: none;
+    font-size: 30px;
     font-weight: bold;
     color: #ccc;
 }
@@ -77,10 +79,14 @@ body {
     display: block;
     flex-wrap: wrap;
     padding: 20px;
-    width: 1830px;
+    width: 1320px;
     float: left;
-    
+    border-left: 1px solid #858585;
+    border-right: 1px solid #858585;
+    margin-left: 245px;
+    height: 779px;
 }
+
 /* 차트 */
 #chart {
     

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP3 재생</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">D</div>
+        <div class="title">커뮤니티</div>
+        <div class="search-container">
+            <input type="text" placeholder="검색">
+            <button>🔍</button>
+        </div>
+        <div class="icons">
+            <div class="icon"><a href="/login">👤</a></div>
+            <div class="icon">🎧</div>
+        </div>
+    </div>
+    
+    <div class="navbar">
+        <div class="nav-item"><a href="/">홈</a></div>
+        <div class="nav-item"><a href="/write">글쓰기</a></div>
+        <div class="nav-item"><a href="/upload">MP3 업로드</a></div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>MP3 파일 재생</h2>
+            <audio controls>
+                <source src="{{ file_url }}" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+</body>
+</html>

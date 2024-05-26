@@ -1,5 +1,5 @@
 import os
-from fastapi import FastAPI, Request, Form
+from fastapi import FastAPI, Request,UploadFile, Form, File
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -7,6 +7,8 @@ from motor.motor_asyncio import AsyncIOMotorClient
 from dotenv import load_dotenv
 import requests
 from bs4 import BeautifulSoup
+import shutil
+
 
 # 환경 변수 로드
 load_dotenv()
@@ -24,6 +26,10 @@ MONGODB_URL = os.getenv("MONGODB_URL", "mongodb://localhost:27017")
 client = AsyncIOMotorClient(MONGODB_URL)
 db = client["mydatabase"]
 posts_collection = db["posts"]
+users_collection = db["users"]
+
+
+
 
 # 멜론 차트 데이터 가져오기
 def get_melon_chart():
@@ -45,6 +51,8 @@ def get_melon_chart():
             'artist': artist.text
         })
     return chart
+
+
 
 # 루트 경로 처리
 @app.get("/", response_class=HTMLResponse)
@@ -79,6 +87,43 @@ async def read_posts(request: Request):
 
 
 
+# 회원가입
+from passlib.context import CryptContext
+
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+
+def verify_password(plain_password, hashed_password):
+    return pwd_context.verify(plain_password, hashed_password)
+
+def get_password_hash(password):
+    return pwd_context.hash(password)
+
+@app.get("/signup", response_class=HTMLResponse)
+async def signup_form(request: Request):
+    return templates.TemplateResponse("signup.html", {"request": request})
+
+@app.post("/signup")
+async def signup(username: str = Form(...), password: str = Form(...)):
+    hashed_password = get_password_hash(password)
+    user = {"username": username, "password": hashed_password}
+    await users_collection.insert_one(user)
+    return RedirectResponse(url="/login", status_code=303)
+
+
+
+# 로그인
+@app.post("/login")
+async def login(username: str = Form(...), password: str = Form(...)):
+    user = await users_collection.find_one({"username": username})
+    if user and verify_password(password, user["password"]):
+        return RedirectResponse(url="/", status_code=303)
+    return templates.TemplateResponse("login.html", {"request": request, "error": "Invalid credentials"})
+
+@app.get("/logout")
+async def logout(request: Request):
+    response = RedirectResponse(url="/")
+    response.delete_cookie("Authorization")
+    return response
 
 
 if __name__ == "__main__":

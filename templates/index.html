@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>커뮤니티</title>
     <link rel="stylesheet" href="../static/styles.css">
+    
 </head>
 <body>
     <div class="header">
-        <div class="logo">D</div>
+        <div><a href="/" class="logo">D</a></div>
         <div class="title"></div>
         <!-- <div class="search-container">
             <input type="text" placeholder="실시간 급상승">
@@ -24,7 +25,7 @@
         <div class="nav-item"><a href="/">홈</a></div>
         <div class="nav-item"><a href="/write">글쓰기</a></div>
         <div class="nav-item"><a href="/posts">전체글</a></div>
-        <div class="nav-item">카테고리 3</div>
+        <div class="nav-item"><a href="/upload">노래</a></div>
         <div class="nav-item">카테고리 4</div>
         <div class="nav-item">카테고리 5</div>
     </div>
@@ -40,14 +41,7 @@
                 </ol>
             </div>
         </div>
-        <div class="section" id="hot-posts">
-            <h2>HOT 글 🔥</h2>
-            <ol>
-                <!-- <li>호시는는 귀엽다.</li>
-                <li>나니는 깜찍하다. <span>🔺3</span></li>
-                <li>머리 깨질것 같다.</li> -->
-            </ol>
-        </div>
+       
         <div class="section" id="recommended-posts">
             <h2>전체글 🌟</h2>
             <ol>
@@ -56,6 +50,7 @@
                 {% endfor %}
             </ol>
         </div>
+        
         <div class="section" id="notice">
             <h2>공지사항</h2>
             <ol>
@@ -63,6 +58,14 @@
                 <li>Html, css, Python, Fastapi, Mongodb로</li>
                 <li>개발하였습니다</li>
                 <li>db건들면 대가리 부숴드리겠습니다</li>
+            </ol>
+        </div>
+        <div class="section" id="hot-posts">
+            <h2>HOT 글 🔥</h2>
+            <ol>
+                <!-- <li>호시는는 귀엽다.</li>
+                <li>나니는 깜찍하다. <span>🔺3</span></li>
+                <li>머리 깨질것 같다.</li> -->
             </ol>
         </div>
         <div class="section" id="search">
