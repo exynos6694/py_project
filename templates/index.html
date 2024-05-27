@@ -36,7 +36,8 @@
             <div class="chart-content">
                 <ol>
                     {% for entry in chart %}
-                    <li><a href="https://www.youtube.com/results?search_query={{ entry.title }}">{{ entry.rank }}: {{ entry.title }} - {{ entry.artist }}</a></li>
+                    <li><a href="https://www.youtube.com/results?search_query={{ entry.title }}">
+                        {{ entry.rank }}  :  {{ entry.title }} </a><br><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp{{ entry.artist }}</span></li>
                     {% endfor %}
                 </ol>
             </div>
@@ -46,7 +47,7 @@
             <h2>전체글 🌟</h2>
             <ol>
                 {% for post in posts %}
-                <li>{{ post.title }}: {{ post.content }}</li>
+                <li>{{ post.author }} : {{ post.title }}</li>
                 {% endfor %}
             </ol>
         </div>

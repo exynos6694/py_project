@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+motor
+dotenv
+requests
+BeautifulSoup
+shutil

@@ -50,7 +50,9 @@ def get_melon_chart():
             'title': song.text,
             'artist': artist.text
         })
+
     return chart
+
 
 
 
