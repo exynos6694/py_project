@@ -1,5 +1,5 @@
 import os
-from fastapi import FastAPI, Request,UploadFile, Form, File
+from fastapi import FastAPI, Request, Form
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -29,8 +29,6 @@ posts_collection = db["posts"]
 users_collection = db["users"]
 
 
-
-
 # 멜론 차트 데이터 가져오기
 def get_melon_chart():
     url = "https://www.melon.com/chart/index.htm"
@@ -48,15 +46,20 @@ def get_melon_chart():
         chart.append({
             'rank': rank,
             'title': song.text,
-            'artist': artist.text
+            'artist': artist.text,
+            
         })
-
     return chart
+    
 
 
 
 
-# 루트 경로 처리
+
+
+
+
+# 루트 경로 
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
     chart = get_melon_chart()

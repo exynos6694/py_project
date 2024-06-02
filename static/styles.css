@@ -74,7 +74,11 @@ body {
 .nav-item a:hover {
     background-color: #555;
 }
+.bs{
+    display: flex;
+    
 
+}
 .container {
     display: block;
     flex-wrap: wrap;
@@ -83,8 +87,8 @@ body {
     float: left;
     border-left: 1px solid #858585;
     border-right: 1px solid #858585;
-    margin-left: 245px;
-    height: 779px;
+    margin: 0 auto auto;
+    
 }
 
 /* 차트 */
@@ -118,6 +122,8 @@ body {
 .chart-content a:hover{
     text-decoration: underline;
 }
+
+
 
 .section {
     /* border: 3px solid #858585; */
